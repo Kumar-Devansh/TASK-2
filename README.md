@@ -28,7 +28,7 @@ Review and Launch using an existing or new key pair.
 
 EC2 instance is now running and accessible via SSH.
 
-**Provisioning EC2 with Terraform**
+# Provisioning EC2 with Terraform
 
 Project-Structure : 
 terraform-ec2/
@@ -37,7 +37,7 @@ terraform-ec2/
 ├── outputs.tf     # Outputs for easy access
 └── terraform.tfvars # Variable values
 
-**1. Terraform Configuration(ec2.tf) :-** 
+# 1. Terraform Configuration(ec2.tf) :-
 
 ubuntu@ip-172-31-35-188:~/terraform-for-task2$ cat ec2.tf
 
@@ -52,9 +52,9 @@ resource "aws_instance" "ec2_for_task2" {
   }
 }
 
-# 2. Terraform Initialization and Execution :-
+# 2. Terraform Initialization and Execution :- 
 
-**2.A terraform init :-**
+# 2.A terraform init :-
 
 ubuntu@ip-172-31-35-188:~/terraform-for-task2$ terraform init
 Initializing the backend...
@@ -74,7 +74,7 @@ If you ever set or change modules or backend configuration for Terraform,
 rerun this command to reinitialize your working directory. If you forget, other
 commands will detect it and remind you to do so if necessary.
 
-2.B terraform validate :- 
+# 2.B terraform validate :- 
 
 ubuntu@ip-172-31-35-188:~/terraform-for-task2$ terraform validate
 Success! The configuration is valid.
@@ -91,7 +91,7 @@ symbols:
 
 Terraform will perform the following actions:
 
-  aws_instance.ec2_simple will be created
+  **aws_instance.ec2_simple will be created**
   + resource "aws_instance" "ec2_simple" {
       + ami                                  = "ami-0f30a9c3a48f3fa79"
       + arn                                  = (known after apply)
@@ -170,7 +170,7 @@ Note: You didn't use the -out option to save this plan, so Terraform can't guara
 "terraform apply" now.
 
 
-**2.D terraform apply :-**
+# 2.D terraform apply :-
 
 ubuntu@ip-172-31-35-188:~/terraform-for-task2$ terraform apply
 local_file.my_file: Refreshing state... [id=3506da7345dd40ff034ad248617e0b74fd931106]
