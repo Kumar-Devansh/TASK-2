@@ -1,17 +1,17 @@
-**AWS EC2 Provisioning with Terraform:**
+# AWS EC2 Provisioning with Terraform:
 
 This project demonstrates the core concepts of AWS and Terraform by provisioning an EC2 instance manually and using Infrastructure as Code (IaC) with Terraform. The objective is to show proficiency in cloud computing, Terraform basics, and reproducible infrastructure deployment.
 
-**AWS core concepts and Terraform :-**
+# AWS core concepts and Terraform :-
 
 This project demonstrates the core concepts of AWS and Terraform by provisioning an EC2 instance manually and using Infrastructure as Code (IaC) with Terraform. 
 
-**Key objectives achieved:**
+# Key objectives achieved:
 - Learned AWS core concepts such as EC2 instances, AMIs, instance types, security groups, and key pairs.
 - Learned Terraform basics: providers, resources, variables, outputs, and automation of cloud infrastructure.
 - Practiced launching EC2 manually and provisioning it automatically using Terraform.
 
-**Launching EC2 Manually**
+# Launching EC2 Manually
 
 Steps:
 
@@ -52,9 +52,9 @@ resource "aws_instance" "ec2_for_task2" {
   }
 }
 
-**2. Terraform Initialization and Execution :-**
+# 2. Terraform Initialization and Execution :-
 
-**2.A terraform init**
+**2.A terraform init :-**
 
 ubuntu@ip-172-31-35-188:~/terraform-for-task2$ terraform init
 Initializing the backend...
@@ -74,12 +74,12 @@ If you ever set or change modules or backend configuration for Terraform,
 rerun this command to reinitialize your working directory. If you forget, other
 commands will detect it and remind you to do so if necessary.
 
-**2.B terraform validate**
+2.B terraform validate :- 
 
 ubuntu@ip-172-31-35-188:~/terraform-for-task2$ terraform validate
 Success! The configuration is valid.
 
-**2.C terraform plan :-**
+# 2.C terraform plan :-
 
 ubuntu@ip-172-31-35-188:~/terraform-for-task2$ terraform plan
 local_file.my_file: Refreshing state... [id=3506da7345dd40ff034ad248617e0b74fd931106]
@@ -91,7 +91,7 @@ symbols:
 
 Terraform will perform the following actions:
 
-  # aws_instance.ec2_simple will be created
+  aws_instance.ec2_simple will be created
   + resource "aws_instance" "ec2_simple" {
       + ami                                  = "ami-0f30a9c3a48f3fa79"
       + arn                                  = (known after apply)
@@ -182,7 +182,7 @@ symbols:
 
 Terraform will perform the following actions:
 
-  # aws_instance.ec2_simple will be created
+  **aws_instance.ec2_simple will be created**
   + resource "aws_instance" "ec2_simple" {
       + ami                                  = "ami-0f30a9c3a48f3fa79"
       + arn                                  = (known after apply)
@@ -268,7 +268,7 @@ aws_instance.ec2_simple: Creation complete after 14s [id=i-088fca5df649c5a74]
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 
 
-**CONCLUSION :**
+# CONCLUSION :
 
 This project covers both manual and automated provisioning of AWS EC2 instances. By using Terraform, we achieve:
 Reproducibility: Same infrastructure can be deployed multiple times
